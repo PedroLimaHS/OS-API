@@ -16,8 +16,10 @@ public class OS {
 
     @JsonFormat(pattern = "dd/MM/YYYY HH:mm")
     private LocalDateTime dataAbertura;
+
     @JsonFormat(pattern = "dd/MM/YYYY HH:mm")
     private LocalDateTime dataFechamento;
+
     private Integer prioridade;
     private String observacoes;
     private Integer status;
@@ -25,6 +27,7 @@ public class OS {
     @ManyToOne
     @JoinColumn(name = "tecnico_id")
     private Tecnico tecnico;
+
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
@@ -70,7 +73,7 @@ public class OS {
         this.dataFechamento = dataFechamento;
     }
 
-    public Prioridade getPrioridade() throws IllegalAccessException {
+    public Prioridade getPrioridade()  {
         return Prioridade.toEnum(this.prioridade);
     }
 
@@ -86,7 +89,7 @@ public class OS {
         this.observacoes = observacoes;
     }
 
-    public Status getStatus() throws IllegalAccessException {
+    public Status getStatus()  {
         return Status.toEnum(this.status);
     }
 
