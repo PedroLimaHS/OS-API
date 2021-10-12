@@ -14,6 +14,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping(value = "/clientes")// endpoint inicial para acessar a classe
 public class ClienteResource {
