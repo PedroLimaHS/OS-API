@@ -1,7 +1,6 @@
 package com.pedrolima.os.config;
 
 
-import com.pedrolima.os.services.DbService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -20,6 +19,7 @@ public class DevConfig {
 
     @Bean
     public boolean instanciaDB() {
+
 
         if (ddl.equals("create")){
             this.dbService.instanciaDb();
