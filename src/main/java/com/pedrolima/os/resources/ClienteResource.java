@@ -1,6 +1,7 @@
 package com.pedrolima.os.resources;
 
 import com.pedrolima.os.domain.Cliente;
+import com.pedrolima.os.domain.Operacao;
 import com.pedrolima.os.domain.Tecnico;
 import com.pedrolima.os.dtos.ClienteDTO;
 import com.pedrolima.os.services.ClienteService;
@@ -23,9 +24,8 @@ public class ClienteResource {
     private ClienteService service;
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<ClienteDTO> findbyId(@PathVariable Integer id) {
-        ClienteDTO objDTO = new ClienteDTO(service.findById(id));//obj
-        return ResponseEntity.ok().body(objDTO);
+    public ResponseEntity<Operacao> findbyId(@PathVariable Integer id) {
+         return ResponseEntity.ok().body(service.findById(id));
     }
 
     @GetMapping

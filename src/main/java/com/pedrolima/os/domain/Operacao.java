@@ -1,11 +1,16 @@
 package com.pedrolima.os.domain;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "operacoes")
+@Getter
+@Setter
 public class Operacao {
-
     @Id
     @SequenceGenerator( name = "SEQ", sequenceName = "GEN_operacoes_ID", allocationSize = 1 )
     @GeneratedValue( strategy = GenerationType.SEQUENCE, generator = "SEQ" )
