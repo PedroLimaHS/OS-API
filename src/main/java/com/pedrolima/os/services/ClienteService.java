@@ -1,7 +1,6 @@
 package com.pedrolima.os.services;
 
 import com.pedrolima.os.Repositories.ClienteRepository;
-import com.pedrolima.os.Repositories.PessoaRepository;
 import com.pedrolima.os.domain.Cliente;
 import com.pedrolima.os.domain.Pessoa;
 import com.pedrolima.os.dtos.ClienteDTO;
